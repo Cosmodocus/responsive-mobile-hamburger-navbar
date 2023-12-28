@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    color: #fff
+}
+
+/* NAVBAR */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #333333;
+    min-height: 10vh;
+    position: relative;
+}
+
+/* NAVBAR LOGO */
+nav h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/* NAVBAR LINKS */
+
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-items a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff ;
+
+}
+
+.navbar-items a:hover{
+    color: aqua;
+}
+
+/* NAVBAR MOBILE BUTTON */
+
+.hamburger{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:hover{
+    background: #f5f5f5d6;
+}
+
+
+.navbar-menu.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0%;
+    bottom: -155px;
+    background: #333333;
+    width: 100%;
+    padding-bottom: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:900px) {
+    .hamburger{
+        display: block;
+    }
+
+    .navbar-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 100%;
+        bottom: -155px;
+        background: #333333;
+        width: 100%;
+        transition: 0.3s ease-in-out;
+    }
+}
